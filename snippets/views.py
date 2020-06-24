@@ -78,7 +78,11 @@ class SnippetDetail(mixins.RetrieveModelMixin,
                     generics.GenericAPIView):
     """
     Retrieve, update or delete a snippet instance.
+    
+    GenericAPIViewclase proporciona la funcionalidad basica, 
+    Los mixins para proporcionan las acciones .retrieve(), .update() y .destroy()
     """
+
     # permission_classes = [permissions.IsAuthenticatedOrReadOnly,
     #                       IsOwnerOrReadOnly]
 
