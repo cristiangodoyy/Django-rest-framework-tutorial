@@ -32,12 +32,12 @@ class SnippetList(generics.ListCreateAPIView):
     #                       permissions.IsAuthenticated]
 
     queryset = Snippet.objects.all()
-    serializer_class = SnippetSerializer
+    serializer_class = SnippetSimpleSerializer
 
 
 class SnippetDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = Snippet.objects.all()
-    serializer_class = SnippetSerializer
+    serializer_class = SnippetSimpleSerializer
 
 
 class UserList(generics.ListAPIView):
