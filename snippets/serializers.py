@@ -13,7 +13,7 @@ class SnippetListSerializer(serializers.ListSerializer):
         fields = ('id', 'code', 'language', 'linenos', 'style', 'title', 'owner_id')
 
     def update(self, instance, validated_data):
-        # Maps for id->instance and id->data item.
+        # Maps for id->instance and id -> data item.
         snippet_mapping = {snippet.id: snippet for snippet in instance}
         data_mapping = {item['id']: item for item in validated_data}
 

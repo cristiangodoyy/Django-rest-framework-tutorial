@@ -26,11 +26,6 @@ class SnippetList(generics.ListCreateAPIView):
     List all snippets, or create a new snippet.
     http://127.0.0.1:8008/snippets/
     """
-    authentication_classes = [SessionAuthentication,
-                              BasicAuthentication]
-    # permission_classes = [permissions.IsAuthenticatedOrReadOnly,
-    #                       permissions.IsAuthenticated]
-
     queryset = Snippet.objects.all()
     serializer_class = SnippetSimpleSerializer
 
