@@ -1,16 +1,7 @@
 from rest_framework import generics
-from rest_framework.authentication import (SessionAuthentication,
-                                           BasicAuthentication)
 from snippets.models import Snippet
-from snippets.serializers import SnippetSerializer, UserSerializer, \
-    SnippetSimpleSerializer
-from django.http import Http404
-from rest_framework.views import APIView
-from rest_framework.response import Response
-from rest_framework import status
+from snippets.serializers import UserSerializer, SnippetSimpleSerializer
 from django.contrib.auth.models import User
-from rest_framework import permissions
-from snippets.permissions import IsOwnerOrReadOnly
 
 """
 http http://127.0.0.1:8000/snippets/
