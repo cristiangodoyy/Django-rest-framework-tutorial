@@ -37,7 +37,7 @@ class Snippet(models.Model):
     language = models.CharField(choices=LANGUAGE_CHOICES, default='python', max_length=100)
     style = models.CharField(choices=STYLE_CHOICES, default='friendly', max_length=100)
     highlighted = models.TextField()
-    project = models.OneToOneField(Project, on_delete=models.PROTECT, null=True, blank=True)
+    #project = models.OneToOneField(Project, on_delete=models.PROTECT, null=True, blank=True)
     errors = models.ManyToManyField(Error, related_name='snippet')
 
     # CASCADE: si borro un proyecto tambien va a borrar el snipet. si hago snippet.project.delete() borra el snippet y el project.
